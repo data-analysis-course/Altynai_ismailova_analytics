@@ -1,0 +1,78 @@
+INSERT INTO customers (full_name, city, phone, email)
+VALUES
+('Alex Turner', 'Bishkek', '+996700111111', 'alex@gmail.com'),
+('Sarah Wilson', 'Osh', '+996700222222', 'sarah@gmail.com'),
+('Michael Scott', 'Naryn', '+996700333333', 'michael@gmail.com'),
+('Dayana Smith', 'Naryn', '+996500111111', 'dayana@gmail.com'),
+('John Carter', 'Bishkek', '+996700444444', 'john@gmail.com'),
+('Emily Brown', 'Osh', '+996700555555', 'emily@gmail.com'),
+('David Miller', 'Talas', '+996700666666', 'david@gmail.com'),
+('Anna Johnson', 'Bishkek', '+996700777777', 'anna@gmail.com'),
+('Robert Green', 'Karakol', '+996700888888', 'robert@gmail.com'),
+('Lisa White', 'Osh', '+996700999999', 'lisa@gmail.com');
+
+INSERT INTO categories (category_name, description)
+VALUES
+('Electronics', 'Electronic devices and accessories'),
+('Clothing', 'Clothes and fashion accessories'),
+('Home Appliances', 'Household equipment'),
+('Books', 'Books and educational materials'),
+('Sport', 'Sports equipment and accessories');
+
+INSERT INTO products (product_name, category_id, price, stock_quantity)
+VALUES
+('Laptop Lenovo', 1, 75000, 10),
+('Wireless Mouse', 1, 1200, 50),
+('Keyboard Logitech', 1, 2500, 30),
+('T-Shirt', 2, 1500, 50),
+('Jeans', 2, 3500, 25),
+('Coffee Machine', 3, 12000, 8),
+('Blender', 3, 6500, 12),
+('SQL for Beginners', 4, 900, 30),
+('Python Programming', 4, 1100, 20),
+('Football', 5, 2500, 20);
+
+INSERT INTO orders (customer_id, order_date, status, total_amount)
+VALUES
+(1, '2026-11-01 10:00:00+06', 'completed', 76200),
+(2, '2026-11-02 11:30:00+06', 'pending', 6500),
+(3, '2026-11-03 12:00:00+06', 'completed', 18500),
+(4, '2026-11-04 14:15:00+06', 'cancelled', 2900),
+(5, '2026-11-05 09:45:00+06', 'completed', 6200),
+(6, '2026-11-06 16:20:00+06', 'processing', 4000),
+(7, '2026-11-07 13:10:00+06', 'completed', 75900),
+(8, '2026-11-08 15:00:00+06', 'pending', 8900),
+(9, '2026-11-09 10:30:00+06', 'completed', 6000),
+(10, '2026-11-10 17:00:00+06', 'processing', 3600);
+
+INSERT INTO order_items (order_id, product_id, quantity, unit_price)
+VALUES
+(1, 1, 1, 75000),
+(1, 2, 1, 1200),
+
+(2, 4, 2, 1500),
+(2, 5, 1, 3500),
+
+(3, 6, 1, 12000),
+(3, 7, 1, 6500),
+
+(4, 8, 2, 900),
+(4, 9, 1, 1100),
+
+(5, 10, 2, 2500),
+(5, 2, 1, 1200),
+
+(6, 3, 1, 2500),
+(6, 4, 1, 1500),
+
+(7, 1, 1, 75000),
+(7, 8, 1, 900),
+
+(8, 7, 1, 6500),
+(8, 2, 2, 1200),
+
+(9, 5, 1, 3500),
+(9, 10, 1, 2500),
+
+(10, 9, 1, 1100),
+(10, 3, 1, 2500);

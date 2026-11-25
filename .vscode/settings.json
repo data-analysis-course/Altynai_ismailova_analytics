@@ -1,3 +1,15 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:pyenv"
+    "python-envs.defaultEnvManager": "ms-python.python:pyenv",
+    "sqltools.connections": [
+        {
+            "name": "lab (local PostgreSQL)",
+            "driver": "PostgreSQL",
+            "server": "localhost",
+            "port": 5432,
+            "database": "lab",
+            "username": "bambook",
+            "askForPassword": false
+        }
+    ],
+    "sqltools.useNodeRuntime": false
 }
